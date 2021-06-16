@@ -7,7 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tozoni-F/aula-11-06.git"
+  },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tozoni-F/aula-11-06/issues"
+  },
+  "homepage": "https://github.com/Tozoni-F/aula-11-06#readme"
 }

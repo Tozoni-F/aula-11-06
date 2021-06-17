@@ -19,10 +19,10 @@ function period(hour){
     return period
 };
 
-var morning_discount = 0.1;
-var afternoon_discount= 0.08;
+var morning_discount = .1;
+var afternoon_discount= .08;
 var nigth_discount= 0;
-var midnigth_discount= .7;
+var midnigth_discount= .2;
 function discount(period){
     var discount = 0;
     if(period === "morning"){
@@ -54,7 +54,7 @@ function produtc (clas,type,manufacturer,year,model,price,final_price){
     this.price = price,
     this.final_price=final_price
 };
-var computer = new produtc("Computer","Laptop","Dell",2021,'Latitude 5470',9000)
+
 function print (obj) {
     var final = "";
     for (var i in obj) {
@@ -68,7 +68,12 @@ function print (obj) {
     }
     return final;
   };
+
+let computer = new produtc("Computer","Laptop","Dell",2021,'Latitude 5470',9000)
 final_price(computer,discount(period(hour)));
+let smarthphone = new produtc("Smarthphone","Android","Samsung",2021,"S21",6250)
+final_price(smarthphone,discount(period(hour)));
 console.log(print(computer))
+console.log(print(smarthphone))
 
 

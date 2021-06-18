@@ -3,12 +3,13 @@ function print (obj) {
     var final = "";
     for (var i in obj) {
         if (i==="price"){
-            final += obj.clas + "." + i + " = " + Intl.NumberFormat('pt-BR',{style:'currency',currency: 'BRL'}).format(obj[i]) + "\n"
+            final += obj.name + "." + i + " = " + Intl.NumberFormat('pt-BR',{style:'currency',currency: 'BRL'}).format(obj[i]) + "\n"
         }else if (i==="final_price"){
-            final += obj.clas + "." + i + " = " + Intl.NumberFormat('pt-BR',{style:'currency',currency: 'BRL'}).format(obj[i]) + "\n"
+            final += obj.name + "." + i + " = " + Intl.NumberFormat('pt-BR',{style:'currency',currency: 'BRL'}).format(obj[i]) + "\n"
         }else if (obj.hasOwnProperty(i)) {
-          final += obj.clas + "." + i + " = " + obj[i] + "\n";
+          final += obj.name + "." + i + " = " + obj[i] + "\n";
       }
     }
     return final
   };
+module.exports = print
